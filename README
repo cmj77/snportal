@@ -1,0 +1,66 @@
+author: Michael Clark
+email: miclark@paloaltonetworks.com
+
+##############################################
+####  OS X  ##################################      
+##############################################
+1. Download Pre-Req APPs and install on system - 
+   a. Docker CE - https://www.docker.com/community-edition#/download
+   b. GIT - OS X -      brew install GIT
+2. Start Docker CE App 
+
+3. Go to cli and run: git clone git clone https://github.com/cmj77/SafeNetworking-Portal.git
+
+4. cd SafeNetworking-Portal - go into directory that was just cloned
+
+5. run from cli - docker-compose build
+
+6. run from cli - docker-compose up
+
+7. Access the containers website to validate that it is running http://0.0.0.0:8888
+
+#############################################
+#### Windows 7 ##############################
+#############################################
+
+Windows 7 Instructions      
+1. Download and install Docker Toolbox - https://www.docker.com/products/docker-toolbox
+        a. check all boxs including vbox
+        b. Trust Oracle Packages for Install
+        c. Git is included
+
+2. Go to Start/All Programs/Git CMD and type git clone https://github.com/cmj77/SafeNetworking-Portal.git (can be done via the GIT GUI as well)
+
+
+   - *** Make sure VT-X or AMD-V is enabled in bios (or in a vm enabled in settings/processor and memory/advanced settings/enable Hypervisor applications in this vm), otherwise it will need to be enabled first
+
+3. Go to Start/All Programs/Docker Quickstart/
+
+4. cd to SafeNetworking-Portal/
+
+5. docker-compose build
+
+6. docker-compose up
+ 
+7. Access the containers website to validate that it is running http://ip.address.of.docker:8888
+
+
+#############################################
+#### Ubuntu 16.10 ###########################
+#############################################
+
+Ubuntu 16.10 Instructions - Ubuntu should be installed with Virtual Server package
+1. Verify and/or Install the following
+        a. Git            -    sudo apt-get install git
+        b. Docker         -    sudo apt-get install docker
+        c. Docker-Compose -    sudo apt-get install docker-compose
+
+2. git clone https://gihub.com/cmj77/SafeNetworking-Portal.git 
+
+4. cd SafeNetworking-Portal/
+
+5. docker-compose build
+
+6. docker-compose up
+
+7. Access the containers website to validate that it is running http://ip.address.of.docker:8888

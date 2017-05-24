@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage[group-separator={,}]{siunitx}
+
+\title{\VAR{d.get('GEOLABEL') | replace("&","\&")} \VAR{d.get('GEOID2')}}
+\date{}
+
+\begin{document}
+
+\maketitle
+\pagestyle{empty}
+\thispagestyle{empty}
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+& Estimate & Margin of Error & Percent Total & Margin of Error\\
+
+Car, truck, or van alone: & \num{\VAR{d.get('COM02_E')}} & +/- \num{\VAR{d.get('COM02_M')}} & \num{\VAR{d.get('COM02_PC')}} & +/- \num{\VAR{d.get('COM02_PM')}}\\
+
+Car, truck, or van carpooled: & \num{\VAR{d.get('COM03_E')}} & +/- \num{\VAR{d.get('COM03_M')}} & \num{\VAR{d.get('COM03_PC')}} & +/- \num{\VAR{d.get('COM03_PM')}}\\
+\hline
+\end{tabular}
+
+\end{document}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+   <body>
+                  <strong>Non-Standard DNS Port, Potential Botnet Communication</strong>
+<table border = 3>
+         <thead>
+            <td>Time Stamp</td>
+            <td>Source</td>
+            <td>Destination</td>
+            <td>Destination Port</td>
+            <td>Threat Name</td>
+            <td>Tag</td>
+            <td>Severity</td>
+         </thead>
+
+         {% for row in rows %}
+            <tr>
+               <td>{{row["Time Logged"]}}</td>
+               <td>{{row["Source address"]}}</td>
+               <td>{{row["Destination address"]}}</td>
+               <td>{{row["Destination Port"] }}</td>
+               <td>{{row["Threat/Content Name"]}}</td>
+               <td>{{row["tag"]}}</td>
+               <td>{{row["Severity"]}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+
+
+      <a href = "/" >Go back to home page</a>
+
+   </body>
+</html>

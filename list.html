@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+   <body>
+
+      <table border = 1>
+         <thead>
+            <td>Time Logged</td>
+            <td>Source</td>
+            <td>Destination</td>
+            <td>Domain Name</td>
+            <td>Threat Name</td>
+            <td>Tag</td>
+         </thead>
+
+         {% for row in rows %}
+            <tr>
+               <td>{{row["Time Logged"]}}</td>
+               <td>{{row["Source address"]}}</td>
+               <td>{{row["Destination address"]}}</td>
+               <td>{{row["Domainname"] }}</td>
+               <td>{{row["Threat/Content Name"]}}</td>
+               <td>{{row["tag"]}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+
+      <a href = "/" >Go back to home page</a>
+
+   </body>
+</html>

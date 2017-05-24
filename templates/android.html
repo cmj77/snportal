@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+   <body>
+<br>
+<br>
+                  <strong>Android Malware</strong>
+        <table border = 2>
+         <thead>
+            <td>Time Logged</td>
+            <td>File Type</td>
+            <td>Domain</td>
+            <td>MD5</td>
+            <td>Size</td>
+         </thead>
+
+         {% for row in rows %}
+            <tr>
+               <td>{{row["create_date"]}}</td>
+               <td>{{row["filetype"]}}</td>
+               <td>{{row["domain"]}}</td>
+               <td>{{row["md5"] }}</td>
+               <td>{{row["size"]}}</td>
+            </tr>
+         {% endfor %}
+        </table>
+<br>
+<br>
+
+      <a href = "/" >Go back to home page</a>
+
+   </body>
+</html>

@@ -1,0 +1,19 @@
+template = """
+    SELECT "Time Logged", "Source address", "Threat/Content Name"
+    FROM afzoom
+    "Threat/Content Name" = "generic:twodrive."
+"""
+
+#dictionary
+
+data = {
+#    "project_id": 123,
+#    "user_id": u"sripathi"
+}
+
+#query bind
+query, bind_params = j.prepare_query(template, data)
+
+#bind parameters
+#self.assertEquals(bind_params, [u'sripathi', 123])
+self.assertEquals(query.strip(), expected_query.strip())

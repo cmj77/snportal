@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+   <body>
+
+
+                     <strong>Domain Name Articaft Search</strong>
+<div class="search">
+<form action="" method=post>
+    <input type=text name=search value="{{ request.form.search}}"></br>
+    <div class="actions"><input type=submit value="Search"></div>
+</form>
+</div>
+<div class=flash>
+    {{ message }}
+</div>
+
+<strong>Domain Articates</strong>
+
+<table border = 3>
+         <thead>
+            <td>Domain</td>
+            <td>Indicator</td>
+            <td>Confidence</td>
+            <td>Indicator Type</td>
+         </thead>
+
+         {% for row in rows %}
+            <tr>
+               <td>{{row["domain"]}}</td>
+               <td>{{row["indicator"]}}</td>
+               <td>{{row["confidence"]}}</td>
+               <td>{{row["indicator_type"]}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+
+
+
+<br>
+<br>
+      <a href = "/" >Go back to home page</a>
+
+   </body>
+</html>
